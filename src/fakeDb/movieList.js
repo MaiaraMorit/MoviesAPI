@@ -1,7 +1,7 @@
 
 //CREATE FAKE DATA BASE
 
-export const movieList = [
+export let movieList = [
     {
         id: 1,
         title: 'Inception',
