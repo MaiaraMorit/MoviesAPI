@@ -1,5 +1,3 @@
-//CREATE SERVER
-
 //START SERVER
 const { ApolloServer } = require('apollo-server');
 const { typeDefs } = require('./types/movie');
