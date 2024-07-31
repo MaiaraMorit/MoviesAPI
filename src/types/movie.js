@@ -2,7 +2,7 @@
 const { ApolloServer, gql } = require('apollo-server');
 
 //SCHEMA
-const typeDefs = gql `
+export const typeDefs = gql `
     type Movie {
         id: ID!
         title: String!
@@ -13,8 +13,8 @@ const typeDefs = gql `
     }
 
     type Query {
-        movies:[Movies]
-        book(id: ID!): Book
+        movies:[Movie]
+        movie(id: ID!): Movie
     }
     type Mutation {
         create(id: ID!, title: String!, year: Int!, genre: String!, director: String!, image: String): Movie
