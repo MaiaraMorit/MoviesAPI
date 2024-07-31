@@ -1,7 +1,7 @@
 
 //CREATE FAKE DATA BASE
 
-export let movieList = [
+let movieList = [
     {
         id: 1,
         title: 'Inception',
@@ -42,4 +42,6 @@ export let movieList = [
         director: 'Pete Docter',
         image: '../utils/images/Inside_Out_(filme).jpg',
     }
-]; 
+];
+
+module.exports = { movieList };

@@ -1,8 +1,8 @@
 //DEFINE TYPES
-const { ApolloServer, gql } = require('apollo-server');
+const { gql } = require('apollo-server');
 
 //SCHEMA
-export const typeDefs = gql `
+const typeDefs = gql `
     type Movie {
         id: ID!
         title: String!
@@ -23,6 +23,7 @@ export const typeDefs = gql `
     }
 `;
 
+module.exports = { typeDefs };
 
 //SCHEMA
 //const typeDefs = gql `

@@ -1,7 +1,9 @@
 //CREATE SERVER
 
 //START SERVER
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer } = require('apollo-server');
+const { typeDefs } = require('./types/movie');
+const { resolvers } = require('./resolvers/movie-resolver')
 
 const app = new ApolloServer({ typeDefs, resolvers });
 //Run server
