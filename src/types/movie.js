@@ -17,7 +17,7 @@ const typeDefs = gql `
         movie(id: ID!): Movie
     }
     type Mutation {
-        create(id: ID!, title: String!, year: Int!, genre: String!, director: String!, image: String): Movie
+        create(title: String!, year: Int!, genre: String, director: String!, image: String): Movie
         update(id: ID!, title: String, year: Int, genre: String, director: String, image: String): Movie
         delete(id: ID!): Movie
     }
