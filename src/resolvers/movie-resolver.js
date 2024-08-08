@@ -74,10 +74,24 @@ const resolvers = {
             if (genre) movieId.genre = genre;
             if (director) movieId.director = director;
             if (image) movieId.image = image;
-
-            // Retornar o filme atualizado
+            
             return movieId;
-        }
+        },
+
+        delete: (_, { id }) => {
+            const movieIndex = movieList.findIndex((movie) => movie.id === Number(id));
+          
+            if (movieIndex === -1) {
+              return { success: false, message: 'Filme não encontrado' };
+            }
+          
+            const deletedMovie = movieList.splice(movieIndex, 1)[0];
+          
+            return {
+              success: true,
+              message: `Filme "${deletedMovie.title}" deletado com sucesso`
+            };
+          }
     }
 };
 
@@ -97,8 +111,6 @@ const resolvers = {
 
 module.exports = { resolvers };
 
-// parte de atualizar um filme
-// parte de excluir um filme
-
 // melhorias:
 // ao adicionar um novo filme, verificar se existe um filme que tenha o mesmo nome e diretor e ano de lançamento, caso tenha não permitir que o filme seja adicionado.
+// quando um filme for deletado que a logica do id seja refeita, ou seja, que o id do filme que foi deletado seja removido e os ids dos filmes seguintes sejam decrementados em 1.

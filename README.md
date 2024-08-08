@@ -8,4 +8,3 @@ Uma API moderna para gerenciamento de filmes, desenvolvida com **GraphQL** e **J
 - **Adicionar Filmes**: Insira novos filmes na sua biblioteca.
 - **Atualizar Filmes**: Edite informações de filmes existentes.
 - **Deletar Filmes**: Remova filmes da sua coleção.
-
