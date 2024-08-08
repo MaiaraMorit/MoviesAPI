@@ -11,6 +11,11 @@ const typeDefs = gql `
         director: String!
         image: String
     }
+    type DeleteMovieResult {
+    success: Boolean!
+    message: String
+    }
+
 
     type Query {
         movies:[Movie]
@@ -19,7 +24,7 @@ const typeDefs = gql `
     type Mutation {
         create(title: String!, year: Int!, genre: String, director: String!, image: String): Movie
         update(id: ID!, title: String, year: Int, genre: String, director: String, image: String): Movie
-        delete(id: ID!): Movie
+        delete(id: ID!): DeleteMovieResult
     }
 `;
 
